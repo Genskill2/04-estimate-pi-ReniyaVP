@@ -41,17 +41,3 @@ int main(void) {
   if (fabs(pi0 - pi1) > 0.05) {
       printf("Two separate estimates %f and %f are too different.\n", pi0, pi1);
       abort();
-  }
-
-    
-  for (int i=2000; i<5000; i++) {
-    pi0 = mc_pi(i);
-    if (!(fabs(pi0 - M_PI) < 0.4)) {
-      printf("Estimate with even %d iterations is %f which is not accurate enough.\n", i, pi0);
-      abort();
-    }
-  }
-}
-
-
-
